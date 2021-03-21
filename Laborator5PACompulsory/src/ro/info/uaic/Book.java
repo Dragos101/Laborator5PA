@@ -2,10 +2,10 @@ package ro.info.uaic;
 
 import java.io.Serializable;
 
-public class Song implements Multimedia, Serializable {
-    private String name, path, date;
+public class Book implements Multimedia, Serializable {
+    private String name, path, date, autor;
 
-    Song(){
+    Book(){
         this.name = null;
         this.path = null;
         this.date = null;
@@ -53,6 +53,14 @@ public class Song implements Multimedia, Serializable {
     public String getDate(){
         return date;
     }
-
-
+    /**
+     * Setter pentru autor
+     * @param autor
+     */
+    public void setAutor(String autor){this.autor = autor;}
+    /**
+     * getter pentru autor
+     * @return
+     */
+    public String getAutor(){return autor;}
 }

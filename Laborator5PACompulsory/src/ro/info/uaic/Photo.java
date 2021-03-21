@@ -1,10 +1,12 @@
 package ro.info.uaic;
 
-public class Photo implements Multimedia{
-    private String nume, path, date;
+import java.io.Serializable;
+
+public class Photo implements Multimedia, Serializable {
+    private String name, path, date;
 
     Photo(){
-        this.nume = null;
+        this.name = null;
         this.path = null;
         this.date = null;
     }
@@ -14,14 +16,14 @@ public class Photo implements Multimedia{
      * @param nume
      */
     public void setName(String nume){
-        this.nume = nume;
+        this.name = nume;
     }
     /**
      * getter pentru nume
      * @return
      */
     public String getName(){
-        return nume;
+        return name;
     }
     /**
      * setter pentru path
@@ -48,7 +50,7 @@ public class Photo implements Multimedia{
      * getter pentru date
      * @return
      */
-    public String getNume(){
+    public String getDate(){
         return date;
     }
 }
