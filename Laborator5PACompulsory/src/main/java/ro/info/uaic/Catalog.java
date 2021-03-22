@@ -77,7 +77,7 @@ public class Catalog implements Serializable{
      * @param catalog
      * @param pathToFile
      */
-    public void save(Catalog catalog, String pathToFile){
+    public void save(Catalog catalog, String pathToFile) throws CatalogLoadException {
         try{
             FileOutputStream fout = new FileOutputStream(pathToFile);
             ObjectOutputStream out=new ObjectOutputStream(fout);
@@ -86,7 +86,7 @@ public class Catalog implements Serializable{
             out.close();
         }
         catch(Exception evt){
-            System.out.println(evt.toString());
+            throw new CatalogLoadException();
         }
     }
     /**
@@ -94,7 +94,7 @@ public class Catalog implements Serializable{
      * si il returneaza
      * @param pathToFile
      */
-    public void load(String pathToFile){
+    public void load(String pathToFile) throws CatalogLoadException {
         try{
             FileInputStream fileInputStream = new FileInputStream(pathToFile);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
@@ -103,7 +103,7 @@ public class Catalog implements Serializable{
             p2.list();
         }
         catch(Exception evt){
-            System.out.println(evt.toString());
+            throw new CatalogLoadException();
         }
     }
     /**

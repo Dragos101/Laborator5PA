@@ -1,13 +1,9 @@
 <component name="ArtifactManager">
-  <artifact build-on-make="true" name="JAR">
+  <artifact name="JAR">
     <output-path>$PROJECT_DIR$/out/artifacts/JAR</output-path>
     <root id="root">
       <element id="module-output" name="Laborator5PACompulsory" />
-      <element id="archive" name="archive.jar">
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-        </element>
-      </element>
+      <element id="archive" name="archive.jar" />
     </root>
   </artifact>
 </component>

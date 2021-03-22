@@ -36,8 +36,16 @@ public class Main {
 
         //catalog.play("Carte");
 
-        //catalog.save(catalog, "C:\\Users\\40749\\OneDrive\\Desktop\\catalog\\catalogSalvat.txt");
-        //catalog.load(catalog, "C:\\Users\\40749\\OneDrive\\Desktop\\catalog\\catalogSalvat.txt");
+        /*try {
+            catalog.save(catalog, "C:\\Users\\40749\\OneDrive\\Desktop\\catalog\\catalogSalvat.txt");
+        } catch (CatalogLoadException e) {
+            e.printStackTrace();
+        }
+        try {
+            catalog.load("C:\\Users\\40749\\OneDrive\\Desktop\\catalog\\catalogSalvat.txt");
+        } catch (CatalogLoadException e) {
+            e.printStackTrace();
+        }*/
 
         /**
          * OPTIONAL
