@@ -9,6 +9,7 @@ public class Catalog implements Serializable{
     private List<Multimedia> listaMultimedia;
     private Desktop desktop;
     private File fisier;
+
     Catalog(){
         listaMultimedia = new LinkedList<>();
         desktop = null;
@@ -26,7 +27,7 @@ public class Catalog implements Serializable{
     /**
      * printeaza listaMultimedia
      */
-    public void print(){
+    public void list(){
         for(int i = 0; i < listaMultimedia.size(); ++i)
             System.out.println(listaMultimedia.get(i).getName() + " " + listaMultimedia.get(i).getPath() + " " + listaMultimedia.get(i).getDate());
     }
@@ -91,19 +92,29 @@ public class Catalog implements Serializable{
     /**
      * citeste informatiile salvate in fisierul unde s-a salvat un catalog
      * si il returneaza
-     * @param catalog
      * @param pathToFile
      */
-    public void load(Catalog catalog, String pathToFile){
+    public void load(String pathToFile){
         try{
             FileInputStream fileInputStream = new FileInputStream(pathToFile);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             Catalog p2 = (Catalog) objectInputStream.readObject();
             objectInputStream.close();
-            p2.print();
+            p2.list();
         }
         catch(Exception evt){
             System.out.println(evt.toString());
         }
     }
+    /**
+     * getter pentru listaMultimedia
+     * @return
+     */
+    public List<Multimedia> getListaMultimedia(){return listaMultimedia;}
+    /**
+     * setter listaMultimedia
+     * @param lista
+     */
+    public void setListaMultimedia(List<Multimedia> lista){this.listaMultimedia = lista;}
+
 }
