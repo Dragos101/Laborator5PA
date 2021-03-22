@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Laborator5PACompulsory:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Laborator5PACompulsory_jar</output-path>
+    <root id="archive" name="Laborator5PACompulsory.jar">
+      <element id="module-output" name="Laborator5PACompulsory" />
+    </root>
+  </artifact>
+</component>
